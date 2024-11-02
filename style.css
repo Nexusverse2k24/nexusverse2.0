@@ -1,0 +1,310 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('images/background.jpeg'); /* Path to the background image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Keyframes for Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #030000;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0c0101;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.navbar ul li a:hover {
+    color: rgba(255, 170, 90, 0.8);
+    transition: color 0.3s ease;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    height: 55vh;
+    width: 100%;
+    color: #333;
+    padding: 60px 0; /* Added top and bottom padding to create space */
+    margin-top: 100px; /* Adds space from the navbar */
+    background: none;
+}
+
+/* Profile Container for Home Section */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 30px;
+    width: 100%;
+}
+
+.profile-pic {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: auto;
+    position: absolute;
+    right: 75px;
+    top: 5%;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Text Content Styling */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 700px;
+    height: 200px;
+    position: absolute;
+    left: 150px;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+.text-content p {
+    margin-bottom: 5px;
+    color: #ECECEC;
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 2.0;
+}
+
+.main-heading {
+    color: #FFB74D;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Register Button Styling */
+.hire-me {
+    background-color: #FF8C42;
+    color: #FFFFFF;
+    width: 200px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hire-me:hover {
+    background-color: #E07B3E;
+}
+
+/* Glassmorphism for Other Sections */
+.portfolio, .skills, .testimonials {
+    padding: 60px 20px;
+    margin: 40px auto; /* Creates space between each section */
+    max-width: 1300px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/* Portfolio*/
+
+.portfolio {
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1300px;
+    text-align: center;
+    position: relative;
+}
+.portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.portfolio-grid {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.portfolio-grid img {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    border-radius: 0%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.portfolio-grid img:nth-child(1) { top: 20%; left: 50%; transform: translate(-50%, -50%); }
+.portfolio-grid img:nth-child(2) { top: 50%; left: 80%; transform: translate(-50%, -50%); }
+.portfolio-grid img:nth-child(3) { top: 83%; left: 70%; transform: translate(-50%, -50%); }
+.portfolio-grid img:nth-child(4) { top: 83%; left: 35%; transform: translate(-50%, -50%); }
+.portfolio-grid img:nth-child(5) { top: 50%; left: 25%; transform: translate(-50%, -50%); }
+.portfolio-grid img:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+
+
+
+
+/* Contact Us */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-box {
+    background-color: rgba(224, 216, 195, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 30px;
+    border-radius: 20px;
+    color: #333;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for contrast */
+    color: #ECECEC; /* Light text color for readability */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center text alignment */
+}
+
+/* Style for each footer section */
+.footer-section {
+    margin: 20px 0; /* Margin between sections */
+    padding: 20px; /* Padding within each section */
+    border-top: 4px solid #FFB74D; /* Thick line at the top of each section matching main heading */
+}
+
+.footer-section h2, .footer-section h3 {
+    margin: 10px 0; /* Margin for headings */
+    color: #FFB74D; /* Gold color for headings */
+}
+
+.form-button {
+    display: inline-block; /* Allow padding and background */
+    padding: 10px 20px; /* Button padding */
+    background-color: #FF8C42; /* Button background color matching the hire button */
+    color: #FFFFFF; /* White text color */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.form-button:hover {
+    background-color: #E07B3E; /* Darker shade on hover */
+}
+
+.contact-details, .social-media {
+    margin: 10px 0; /* Margin for contact and social media sections */
+}
+
+.social-media p {
+    margin-top: 5px; /* Slightly more margin for the social media links */
+    color: #FFB74D; /* Match social media link color with headings */
+}
+
+footer p {
+    font-size: 14px; /* Smaller text size for copyright notice */
+    color: #ECECEC; /* Consistent light text color */
+}
